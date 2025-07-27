@@ -1,0 +1,228 @@
+:root {
+  --bg-color: #161513;
+  --card-bg: #1e1c1a;
+  --text-color: #ffffff;
+  --subtext-color: #ccc;
+  --accent-color: #DA7C25;
+  --border-color: #292522;
+  --point-color: #aaa;
+}
+
+html {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Section styling */
+.project-section {
+  background-color: var(--bg-color);
+  padding: 4rem 1rem;
+  color: var(--text-color);
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Title */
+.section-title {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+/* Subtitle */
+.section-description {
+  font-size: 1.1rem;
+  color: var(--subtext-color);
+  margin-bottom: 3rem;
+}
+
+/* Theme toggle button */
+.theme-toggle-container {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.theme-toggle-btn {
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  background-color: #b2611a;
+}
+
+/* Grid layout */
+.project-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Card styles */
+.project-card {
+  background: var(--card-bg);
+  color: var(--text-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.5s ease, color 0.5s ease;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.project-card h3 {
+  color: var(--accent-color);
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.project-card p {
+  color: var(--subtext-color);
+  margin-bottom: 1rem;
+}
+
+.project-card ul {
+  padding-left: 1.25rem;
+  color: var(--point-color);
+  font-size: 0.95rem;
+}
+
+.project-card ul li {
+  margin-bottom: 0.4rem;
+}
+
+.project-card .click-hint {
+  font-size: 0.9rem;
+  color: var(--accent-color);
+  font-weight: bold;
+  margin-top: 0.8rem;
+  display: block;
+}
+
+/* Modal (forced dark theme) */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Make modal always dark */
+.modal-content {
+  background: #1e1c1a !important;
+  color: #ffffff !important;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 90%;
+  width: 500px;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  animation: scaleIn 0.3s ease;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 1.8rem;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.visit-link {
+  display: inline-block;
+  margin-top: 1.2rem;
+  padding: 0.6rem 1.4rem;
+  background-color: var(--accent-color);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.visit-link:hover {
+  background-color: #b8621e;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.95); }
+  to { transform: scale(1); }
+}
+
+/* Responsive Modal */
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    margin: 0.5rem 0;
+  }
+
+  .modal-content {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .modal-close {
+    font-size: 1.5rem;
+    top: 10px;
+    right: 12px;
+  }
+
+  .visit-link {
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,26 @@
+/* @import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+} */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  background: #161513;
+  color: white;
+  font-family: "Arimo", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  
+}
+
+html {
+  scroll-behavior: smooth;
+  cursor: pointer;
+}
+
+
