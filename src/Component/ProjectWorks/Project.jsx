@@ -20,7 +20,7 @@ const projects = [
       "Responsive layout for mobile & desktop",
       "Focus on animations and layout accuracy",
     ],
-    link: "https://your-testyantra-clone-link.com",
+    link: "https://github.com/shashank-ranjan98/TestYantra",
   },
   {
     title: "Landing Page of WHO",
@@ -50,7 +50,7 @@ const projects = [
       "Dark/light theme toggle",
       "Mobile-first responsive design",
     ],
-    link: "",
+    link: "https://my-portfolio-nu-nine-18.vercel.app",
   },
   {
     title: "Food Blog Platform",

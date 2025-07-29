@@ -152,8 +152,8 @@ body {
 
 /* Make modal always dark */
 .modal-content {
-  background: #1e1c1a !important;
-  color: #ffffff !important;
+  /* background: #1e1c1a !important; */
+  /* color: #ffffff !important; */
   padding: 2rem;
   border-radius: 12px;
   max-width: 90%;
@@ -161,6 +161,8 @@ body {
   position: relative;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
   animation: scaleIn 0.3s ease;
+  background: var(--card-bg);
+  color: var(--text-color);
 }
 
 .modal-close {
@@ -170,7 +172,7 @@ body {
   font-size: 1.8rem;
   background: transparent;
   border: none;
-  color: #ffffff;
+   color: var(--text-color);
   cursor: pointer;
 }
 
@@ -225,4 +227,14 @@ body {
     padding: 0.5rem 1rem;
     font-size: 0.95rem;
   }
+}
+
+[data-theme="light"] {
+  --bg-color: #f5f5f5;
+  --card-bg: #ffffff;
+  --text-color: #111111;
+  --subtext-color: #333333;
+  --accent-color: #DA7C25;
+  --border-color: #e0e0e0;
+  --point-color: #555555;
 }

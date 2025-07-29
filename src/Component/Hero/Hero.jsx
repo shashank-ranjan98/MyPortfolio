@@ -12,6 +12,7 @@ const Hero = () => {
   };
 
   return (
+   <>
     <div className="relative overflow-hidden">
       <div className="Hero-comp relative z-10">
         <img src={p1} alt="Shashank" />
@@ -38,6 +39,8 @@ const Hero = () => {
         </div>
       </div>
     </div>
+   
+   </>
   );
 };
 
